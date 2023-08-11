@@ -1,8 +1,8 @@
+import GraficoVendas from '../components/GraficoVendas';
 import { useData } from '../hooks/useData';
 
 const Resumo = () => {
   const { data } = useData();
-  console.log(data);
 
   if (!data) return null;
   return (
@@ -37,7 +37,9 @@ const Resumo = () => {
         </div>
       </div>
 
-      <div className="box">Gráficos</div>
+      <div className="box mb">
+        <GraficoVendas data={data} />
+      </div>
     </section>
   );
 };

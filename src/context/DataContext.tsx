@@ -33,7 +33,7 @@ const getDate = (daysAgo: number) => {
 export const DataContext = createContext<IDataContext | null>(null);
 
 export const DataContextProvider = ({ children }: PropsWithChildren) => {
-  const [inicio, setInicio] = useState(getDate(30));
+  const [inicio, setInicio] = useState(getDate(14));
   const [final, setFinal] = useState(getDate(0));
 
   const { data, loading, error } = useFetch<IVenda[]>(
